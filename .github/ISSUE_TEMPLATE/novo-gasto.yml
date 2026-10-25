@@ -1,0 +1,35 @@
+name: Registrar Gasto
+description: Adiciona um novo gasto de cartão de crédito para a soma do mês
+title: "[Gasto]: "
+labels: ["gasto"]
+body:
+  - type: input
+    id: valor
+    attributes:
+      label: Valor (R$)
+      description: "Informe o valor. Exemplo: 49.90 ou 49,90"
+      placeholder: "49.90"
+    validations:
+      required: true
+
+  - type: input
+    id: descricao
+    attributes:
+      label: Descrição / Estabelecimento
+      placeholder: "Supermercado, Posto, Restaurante..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - Alimentação
+        - Transporte / Combustível
+        - Lazer / Streaming
+        - Saúde / Farmácia
+        - Contas / Assinaturas
+        - Outros
+    validations:
+      required: true
